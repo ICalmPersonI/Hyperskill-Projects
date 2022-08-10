@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+    <link rel="stylesheet" href="../styles/page_add_style.css">
+</head>
+<body>
+    <div id="container">
+        <textarea id="code_snippet">// write your code here</textarea>
+            <div class="restriction_container">
+                <p>Time restriction:</p>
+                <input id="time_restriction" type="text"/>
+            </div>
+            <div class="restriction_container">
+                <p>Views restriction:</p>
+                <input id="views_restriction" type="text"/>
+            </div>
+        <button id="send_snippet" type="submit" onclick="send()">Submit</button>
+    </div>
+    <script src="../scripts/send.js"></script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+2021-05-12 23:14:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:14:12 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:15:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:15:18 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:15:18 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:20:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:20:04 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:20:05 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:22:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:22:41 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:22:42 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:22:42 jdbc[27]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at carsharing.H2Tools.readRecords(H2Tools.java:105)
+	at carsharing.DaoImplements.getAllRecords(DaoImplements.java:25)
+	at carsharing.Application.menuTableCar(Main.java:100)
+	at carsharing.Application.execute(Main.java:69)
+	at carsharing.Main.main(Main.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:153)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$0(MainMethodExecutor.java:179)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 25 more
+2021-05-12 23:22:42 jdbc[27]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at carsharing.H2Tools.readRecords(H2Tools.java:105)
+	at carsharing.DaoImplements.getAllRecords(DaoImplements.java:25)
+	at carsharing.Application.menuTableCar(Main.java:100)
+	at carsharing.Application.execute(Main.java:69)
+	at carsharing.Main.main(Main.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:153)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$0(MainMethodExecutor.java:179)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 25 more
+2021-05-12 23:22:42 jdbc[27]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at carsharing.H2Tools.readRecords(H2Tools.java:105)
+	at carsharing.DaoImplements.getAllRecords(DaoImplements.java:25)
+	at carsharing.Application.menuTableCar(Main.java:100)
+	at carsharing.Application.execute(Main.java:69)
+	at carsharing.Main.main(Main.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:153)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$0(MainMethodExecutor.java:179)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 25 more
+2021-05-12 23:30:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:30:04 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-12 23:30:04 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company (id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 19:42:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 19:42:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 19:58:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 19:58:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 19:58:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 19:58:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 19:58:10 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CUSTOMER(NAME) VALUE[*]('First customer');"; expected "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+INSERT INTO customer(name) VALUE('First customer'); [42001-200]
+2021-05-15 20:01:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:01:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:01:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:01:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:01:05 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:03:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:03:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:03:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:03:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:03:22 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:05:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:05:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:05:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:05:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:05:20 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:05:20 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:05:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:07:33 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:07:34 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:07:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:08:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:08:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:08:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:08:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:08:38 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:08:38 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:08:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:09:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:09:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:09:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:09:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:09:22 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:09:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:09:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:09:22 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:10:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:10:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:10:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:10:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:10:45 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=0;"; SQL statement:
+SELECT * FORM car WHERE id=0; [42000-200]
+2021-05-15 20:10:45 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:10:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:10:46 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=0;"; SQL statement:
+SELECT * FORM car WHERE id=0; [42000-200]
+2021-05-15 20:16:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:16:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:16:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:16:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:16:25 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:16:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:18:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:18:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:18:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:18:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:18:40 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:18:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:21:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:21:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:21:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:21:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:22:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:22:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:22:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:22:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:22:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:39:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:39:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:39:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:39:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:39:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:39:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:39:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:39:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:39:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:39:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:52:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:52:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:52:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:52:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:52:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:52:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:03:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:03:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:07:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:07:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:07:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:07:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:07:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:10:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:10:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:10:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:11:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:11:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:11:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]

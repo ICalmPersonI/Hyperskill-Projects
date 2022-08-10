@@ -1,0 +1,175 @@
+2021-05-15 00:07:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Неизвестный тип данных: "INTEGERCONSTRAINT"
+Unknown data type: "INTEGERCONSTRAINT"; SQL statement:
+CREATE TABLE customer(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL,rented_car_id INTEGERCONSTRAINT fk_id FOREIGN KEY(rented_car_id)REFERENCES car(id)); [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.command.CommandList.executeRemaining(CommandList.java:54)
+	at org.h2.command.CommandList.update(CommandList.java:67)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at carsharing.Db.createTable(Db.java:64)
+	at carsharing.Main.main(Main.java:11)
+2021-05-15 00:08:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 00:08:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ограничение "FK_ID" уже существует
+Constraint "FK_ID" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [90045-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:114)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.CommandList.executeRemaining(CommandList.java:59)
+	at org.h2.command.CommandList.update(CommandList.java:67)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at carsharing.Db.createTable(Db.java:64)
+	at carsharing.Main.main(Main.java:11)
+2021-05-15 00:09:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "GFGF" не найден
+Column "GFGF" not found; SQL statement:
+INSERT INTO car(name, company_id) VALUES(gfgf, 1); [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at carsharing.Db.insert(Db.java:74)
+	at carsharing.DaoImplements.createRecord(DaoImplements.java:18)
+	at carsharing.Application.menuTableCar(Main.java:108)
+	at carsharing.Application.menuTableCompany(Main.java:66)
+	at carsharing.Application.execute(Main.java:30)
+	at carsharing.Main.main(Main.java:12)
+2021-05-15 19:57:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 19:59:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO CUSTOMER(NAME) VALUE[*]('test');"; ожидалось "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO CUSTOMER(NAME) VALUE[*]('test');"; expected "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+INSERT INTO customer(name) VALUE('test'); [42001-200]
+2021-05-15 20:00:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:12:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FORM[*] CAR WHERE ID=0;"
+Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=0;"; SQL statement:
+SELECT * FORM car WHERE id=0; [42000-200]
+2021-05-15 20:12:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:15:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:15:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "fk_rented_car_id" не найден
+Column "fk_rented_car_id" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3169)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:352)
+	at carsharing.Db.select(Db.java:92)
+	at carsharing.DaoImplements.getAllRecords(DaoImplements.java:37)
+	at carsharing.Application.menuTableCustomer(Main.java:140)
+	at carsharing.Application.execute(Main.java:53)
+	at carsharing.Main.main(Main.java:12)
+2021-05-15 20:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:19:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:20:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FORM[*] CAR WHERE ID=1;"
+Syntax error in SQL statement "SELECT * FORM[*] CAR WHERE ID=1;"; SQL statement:
+SELECT * FORM car WHERE id=1; [42000-200]
+2021-05-15 20:20:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:21:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:26:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:28:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:31:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:32:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:33:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:35:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:37:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 20:38:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:07:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:09:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]
+2021-05-15 21:10:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE NOT NULL); [42101-200]

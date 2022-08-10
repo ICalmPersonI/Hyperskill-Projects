@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+group 'advisor'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+mainClassName = 'advisor.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.7'
+    implementation 'com.beust:jcommander:1.78'
+
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class' : 'advisor.Main'
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
